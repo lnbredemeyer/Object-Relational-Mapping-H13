@@ -25,11 +25,9 @@ SO THAT my company can compete with other e-commerce companies
 * THEN I am able to successfully create, update, and delete data in my database
 
 ## Screenshots:
-![alt tag]( "screenshot")
-
-![alt tag]( "screenshot")
+![alt tag](https://user-images.githubusercontent.com/99215212/172491416-efb28270-b3d7-4f1e-8b5c-75fcedcb084c.png "screenshot")
 
 ## Links:
 * To view on GitHub, please click: https://lnbredemeyer.github.io/Object-Relational-Mapping-H13/
 * To view the repo, please click: https://github.com/lnbredemeyer/Object-Relational-Mapping-H13
-* To view on YouTube, please click: 
+* To view on YouTube, please click: https://youtu.be/W_-CxzDOOrA
