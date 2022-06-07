@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const sequelize = require('sequelize');
-const { Category, Product, Tag } = require('../../models');
+const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
@@ -8,10 +7,10 @@ router.get('/', async (req, res) => {
   // find all categories
   // be sure to include its associated Products
   const categoryData = await Category.findAll({
-    include: { 
+    include: {
       model: Product,
-    attributes: ["id", "product_name", "price", "stock", "category_id"],
-    }
+      attributes: ["id", "product_name", "price", "stock", "category_id"],
+    },
   });
   return res.json(categoryData);
 });
@@ -42,7 +41,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
-  const categoryData = await Category.update(
+  const categoryData = await Category.update(req.body,
     {
       where: {
         id: req.body.id,
@@ -52,7 +51,7 @@ router.put('/:id', async (req, res) => {
   return res.json(categoryData)
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   const categoryData = await Category.destroy({
     where: {
